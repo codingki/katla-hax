@@ -23,7 +23,7 @@ export default function App() {
       </div>
       <button
         style={{ marginTop: 10 }}
-        onClick={async () => setAnswers(await katla(state))}
+        onClick={async () => setAnswers(await katlaHax(state))}
       >
         Cari
       </button>
@@ -35,7 +35,7 @@ export default function App() {
   );
 }
 
-const katla = async (charsMap) => {
+const katlaHax = async (charsMap) => {
   const kbbi = await fetch("https://kbbi.vercel.app").then((res) => res.json());
   const words = kbbi.entries
     .map((entry) => {
